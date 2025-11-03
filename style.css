@@ -1,0 +1,316 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  box-sizing: border-box;
+  background: url(images/logIn-Background.jpg);
+  background-size: 205vh 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+*{
+  font-family: "Quantico", sans-serif;
+}
+img{
+  margin: 0 0 5% -35%;
+}
+
+@keyframes topDown {
+  from{transform: translateY(-50vh);}
+  to{transform: translateY(0vh);}
+}
+@keyframes bottomUp {
+  from{transform: translateY(50vh);}
+  to{transform: translateY(0vh);}
+}
+@keyframes leftRight {
+  from{transform: translateX(-100vh);}
+  to{transform: translateY(0vh);}
+}
+@keyframes rightLeft {
+  from{transform: translateX(50vh);}
+  to{transform: translateY(0vh);}
+}
+@keyframes pour {
+  from{height: 0;}
+  to{height: 24vh;}
+}
+@keyframes fillBottom {
+  from{border-top: 0vh solid rgb(222, 202, 165); transform: translateY(7vh);}
+  to{border-top: 7vh solid rgb(222, 202, 165); transform: translateY(0vh);}
+}
+@keyframes fillMiddle {
+  from{border-top: 0vh solid rgb(105, 85, 48); transform: translateY(14vh);}
+  to{border-top: 14vh solid rgb(105, 85, 48); transform: translateY(0vh);}
+}
+@keyframes fillTop {
+  from{border-top: 0vh solid rgb(240, 236, 228); transform: translateY(5vh);}
+  to{border-top: 5vh solid rgb(240, 236, 228); transform: translateY(0vh);}
+}
+#coffeePot * {animation-timing-function: ease;}
+
+.coffeePot{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90vh;
+  height: 80vh;
+}
+#cofPot-lid{
+  width: 100%;
+  height: 10%;
+  background-color: rgb(181, 18, 18);
+  border-radius: 15px 15px 0 0;
+  animation: topDown 2s;
+}
+#cofPot-top{
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 100%;
+  height: 34%;
+  background-color: rgb(192, 46, 27);
+  animation: topDown 2s;
+}
+#top-control{
+  display: flex;
+  align-items: center;
+  width: 80%;
+  height: 75%;
+  background-color: rgb(231, 199, 38);
+  border-radius: 15px;
+  animation: topDown 2s;
+}
+.btnPanel{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2vh;
+  height: 45%;
+  padding: 0 3.5%;
+  animation: topDown 2s;
+}
+.panelBtn{
+  width: 100%;
+  height: 2vh;
+  background-color: black;
+  border-radius: 50%;
+}
+#control-display{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 70%;
+  background-color: rgb(27, 26, 32);
+  border-radius: 5px;
+  animation: topDown 2s;
+}
+#control-display h1{
+  color: white;
+}
+.control-big-btn{
+  width: 8vh;
+  height: 8vh;
+  background-color: black;
+  border-radius: 50%;
+  margin: 15%;
+  animation: topDown 2s;
+}
+.control-big-btn h2{
+  font-size: 10pt;
+  color: rgb(162, 41, 41);
+}
+#cofPot-back{
+  width: 50%;
+  height: 48%;
+  background-color: rgb(181, 18, 18);
+  animation: leftRight 2s;
+}
+#back-dispenser{
+  width: 35%;
+  height: 15%;
+  margin-left: 36%;
+  animation: topDown 2s;
+}
+#dispenser-base{
+  width: 100%;
+  height: 85%;
+  background-color: rgb(67, 64, 84);
+  border-radius: 0 0 5px 5px;
+}
+#dispenser-spouts{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  height: 25%;
+  margin: auto;
+}
+.spouts{
+  width: 18%;
+  height: 100%;
+  background-color: rgb(27, 26, 33);
+}
+.pourSpouts{
+  width: 18%;
+  height: 1.5vh;
+  background-color: rgb(137, 100, 74);
+  animation: pour 6s;
+  animation-fill-mode: forwards;
+}
+#coffee-cup{
+  width: 28%;
+  margin: 15% 0 0 33%;
+  animation: bottomUp 2s;
+}
+#cup{
+  width: 100%;
+  height: 0;
+  border-top: 26vh solid rgb(165, 199, 222);
+  border-left: 3vh solid transparent;
+  border-right: 3vh solid transparent;
+  border-radius: 0 0 28px 28px;
+}
+.cup-bottom{
+  
+}
+.bottomFill{
+  width: 85%;
+  height: 0;
+  border-left: 0.7vh solid transparent;
+  border-right: 0.7vh solid transparent;
+  margin: -70% 0 0 2%;
+  border-radius: 0 0 25px 25px;
+  animation: fillBottom 2s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+}
+.cup-middle{
+  
+}
+.middleFill{
+  width: 96%;
+  height: 0;
+  border-left: 1.7vh solid transparent;
+  border-right: 1.7vh solid transparent;
+  margin: -165% 0 0 -11.5%;
+  animation: fillMiddle 2s;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+}
+.cup-top{
+  
+}
+.topFill{
+  width: 122%;
+  height: 0;
+  border-left: 0.8vh solid transparent;
+  border-right: 0.8vh solid transparent;
+  margin: -150% 0 0 -17.5%;
+  border-radius: 15px 15px 0 0;
+  animation: fillTop 2s;
+  animation-delay: 8s;
+  animation-fill-mode: forwards;
+}
+#cofPot-pot{
+  display: flex;
+  align-items: center;
+  width: 40%;
+  height: 48%;
+  background-color: rgb(27, 26, 33);
+  animation: rightLeft 2s;
+}
+#pot-glass{
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  width: 100%;
+  height: 80%;
+  background-color: rgb(165, 199, 222);
+  animation: rightLeft 2s;
+}
+#pot-empty{
+  width: 90%;
+  height: 90%;
+  background-color: white;
+  animation: rightLeft 2s;
+}
+#pot-empty p{
+  margin: 0 0 0 5%;
+}
+#username{
+  padding-top: 10%;
+}
+#pot-empty input{
+  margin: 0 0 5% 8%;
+}
+#cofPot-base{
+  width: 100%;
+  border-bottom: 6.5vh solid rgb(27, 26, 33);
+  border-left: 1vh solid transparent;
+  border-right: 1vh solid transparent;
+  height: 0;
+  border-radius: 25px 25px 0 0;
+  animation: bottomUp 2s;
+}
+#cofPot-base a{
+  text-decoration: none;
+  margin-left: 5%;
+  color: rgb(165, 199, 222);
+  z-index: 2;
+}
+#highlight{
+  width: 28vh;
+  height: 80vh;
+  margin-left: -90vh;
+  background-color: rgba(255, 255, 255, 0.08);
+  z-index: 1;
+}
+
+
+
+
+
+
+
+
+.coffee-bean-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.coffee-bean {
+  position: absolute;
+  background-color: #6F4E37;
+  border-radius: 50%;
+  width: 15px;
+  height: 20px;
+  /* animation: fall 5s linear infinite; */
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(calc(500px + 20px)) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.coffee-bean:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.coffee-bean:nth-child(3) {
+  animation-delay: 2s;
+}
